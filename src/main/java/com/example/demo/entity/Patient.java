@@ -10,38 +10,19 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
-@Table(
-        name = "patients",
-        schema = "pfa",
-        uniqueConstraints = {
-        @UniqueConstraint(
-                name = "email_unique",
-                columnNames = "email"
-        ),
-        @UniqueConstraint(
-                name = "tel_unique",
-                columnNames = "telephone"
-        )
-}
-)
-
 
 public class Patient {
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.IDENTITY
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    )
-
-   private Long Id;
+    private Long Id;
     @Column(nullable = false)
     private String nom;
     @Column(nullable = false)
     private String prenom;
     @Column(nullable = false)
     private String email;
-    @Column(name = "telephone")
+
     private String tel;
     private String adresse;
     private String imageUrl;

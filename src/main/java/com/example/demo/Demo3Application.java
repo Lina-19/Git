@@ -18,8 +18,8 @@ public class Demo3Application  {
     @Bean
  CommandLineRunner commandLineRunner(PatientRepository patientRepository){
         return args -> {
-            Patient patient;
-            patientRepository.save(new Patient(null,"test","test1","email@gmail.com","314544563464","jvlgvlvlfjv;","6465463dzef",null,null));
+            Patient pa=new Patient(null,"test","test1","email@gmail.com","314544563464","jvlgvlvlfjv;","6465463dzef",null,null);
+            patientRepository.save(pa);
         };
  }
 
